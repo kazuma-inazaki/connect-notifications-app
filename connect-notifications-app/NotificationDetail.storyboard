@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NotificationDetail-->
+        <scene sceneID="hsT-LU-pod">
+            <objects>
+                <viewController storyboardIdentifier="NotificationDetail" title="NotificationDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qSK-WU-b5d" customClass="NotificationDetailViewController" customModule="connect_notifications_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j3c-Rc-23o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iAT-gh-f2V">
+                                <rect key="frame" x="0.0" y="88" width="414" height="248.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iAT-gh-f2V" secondAttribute="height" multiplier="5:3" id="TrD-Hc-cOY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Yv-UX-enN">
+                                <rect key="frame" x="0.0" y="336.5" width="414" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ple-c4-HyH">
+                                <rect key="frame" x="14" y="394" width="90" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.50685109500000003" green="0.50440253899999998" blue="0.50929965099999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycI-0B-5d8">
+                                <rect key="frame" x="14" y="415.5" width="386" height="432.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="34Z-hf-dFc"/>
+                        <color key="backgroundColor" red="0.92814964060000005" green="0.99353486300000005" blue="0.99639314410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ple-c4-HyH" firstAttribute="top" secondItem="8Yv-UX-enN" secondAttribute="bottom" id="0Dc-RS-mg1"/>
+                            <constraint firstItem="iAT-gh-f2V" firstAttribute="top" secondItem="34Z-hf-dFc" secondAttribute="top" id="9t1-1p-CBe"/>
+                            <constraint firstItem="8Yv-UX-enN" firstAttribute="top" secondItem="iAT-gh-f2V" secondAttribute="bottom" id="GyU-xA-1NA"/>
+                            <constraint firstItem="iAT-gh-f2V" firstAttribute="leading" secondItem="34Z-hf-dFc" secondAttribute="leading" id="L0B-F3-HQS"/>
+                            <constraint firstItem="34Z-hf-dFc" firstAttribute="trailing" secondItem="ycI-0B-5d8" secondAttribute="trailing" constant="14" id="PqG-RW-z9p"/>
+                            <constraint firstItem="34Z-hf-dFc" firstAttribute="trailing" secondItem="8Yv-UX-enN" secondAttribute="trailing" id="eFJ-OT-KUe"/>
+                            <constraint firstItem="ple-c4-HyH" firstAttribute="leading" secondItem="34Z-hf-dFc" secondAttribute="leading" constant="14" id="fCY-JY-zoH"/>
+                            <constraint firstItem="34Z-hf-dFc" firstAttribute="trailing" secondItem="iAT-gh-f2V" secondAttribute="trailing" id="gNc-R8-Vnu"/>
+                            <constraint firstItem="8Yv-UX-enN" firstAttribute="leading" secondItem="34Z-hf-dFc" secondAttribute="leading" id="i1a-da-r8o"/>
+                            <constraint firstItem="ycI-0B-5d8" firstAttribute="leading" secondItem="34Z-hf-dFc" secondAttribute="leading" constant="14" id="tT3-wG-Pbj"/>
+                            <constraint firstItem="34Z-hf-dFc" firstAttribute="bottom" secondItem="ycI-0B-5d8" secondAttribute="bottom" constant="14" id="upE-YV-Q1R"/>
+                            <constraint firstItem="ycI-0B-5d8" firstAttribute="top" secondItem="ple-c4-HyH" secondAttribute="bottom" id="wkd-MI-bYp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="NotificationDetail" id="T1i-Hh-Cpj"/>
+                    <connections>
+                        <outlet property="notificationDesc" destination="ycI-0B-5d8" id="0Nq-WQ-NAW"/>
+                        <outlet property="notificationHeaderImage" destination="iAT-gh-f2V" id="Cjb-Zw-Nl3"/>
+                        <outlet property="notificationTitle" destination="8Yv-UX-enN" id="fng-2U-yLA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bat-dC-uHA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1453.6231884057972" y="411.83035714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VPS-kZ-mkm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wl1-7B-zaa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yT4-6P-oQX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.51971483230000004" green="0.59787285329999995" blue="0.98306459189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qSK-WU-b5d" kind="relationship" relationship="rootViewController" id="u4d-ug-eyN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PQE-42-bUh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="543.47826086956525" y="411.83035714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

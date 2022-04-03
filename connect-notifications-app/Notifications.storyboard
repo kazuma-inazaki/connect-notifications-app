@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tFM-7L-6Ft">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notifications-->
+        <scene sceneID="N4d-E7-ejP">
+            <objects>
+                <viewController storyboardIdentifier="Notifications" title="Notifications" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nih-Fd-UgU" customClass="NotificationsViewController" customModule="connect_notifications_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cev-2c-3A7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vjo-4e-2kA">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.92814964060000005" green="0.99353486300000005" blue="0.99639314410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZMK-ZJ-gcP">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hWA-Uh-ZOw"/>
+                        <color key="backgroundColor" red="0.92814964060000005" green="0.99353486300000005" blue="0.99639314410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vjo-4e-2kA" firstAttribute="top" secondItem="hWA-Uh-ZOw" secondAttribute="top" id="94A-KY-jjo"/>
+                            <constraint firstItem="vjo-4e-2kA" firstAttribute="leading" secondItem="hWA-Uh-ZOw" secondAttribute="leading" id="HyN-NJ-elf"/>
+                            <constraint firstItem="hWA-Uh-ZOw" firstAttribute="bottom" secondItem="vjo-4e-2kA" secondAttribute="bottom" id="RDG-98-Vy2"/>
+                            <constraint firstItem="hWA-Uh-ZOw" firstAttribute="trailing" secondItem="vjo-4e-2kA" secondAttribute="trailing" id="TxD-jJ-LHs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notifications" id="uwJ-4j-Y5B"/>
+                    <connections>
+                        <outlet property="collectionView" destination="vjo-4e-2kA" id="YX2-Fp-l2h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BXA-Jq-Snj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1453.6231884057972" y="411.83035714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="let-fF-19d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tFM-7L-6Ft" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tt4-Ob-8XN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.51971483230000004" green="0.59787285329999995" blue="0.98306459189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Nih-Fd-UgU" kind="relationship" relationship="rootViewController" id="UnH-Jd-Ho3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RzY-hF-g2r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="543.47826086956525" y="411.83035714285711"/>
+        </scene>
+    </scenes>
+</document>
