@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--title-->
+        <!--Notifications-->
         <scene sceneID="N4d-E7-ejP">
             <objects>
-                <viewController id="Nih-Fd-UgU" customClass="NotificationsViewController" customModule="connect_notifications_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Notifications" title="Notifications" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nih-Fd-UgU" customClass="NotificationsViewController" customModule="connect_notifications_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cev-2c-3A7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +37,7 @@
                             <constraint firstItem="hWA-Uh-ZOw" firstAttribute="trailing" secondItem="vjo-4e-2kA" secondAttribute="trailing" id="TxD-jJ-LHs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="title" id="uwJ-4j-Y5B"/>
+                    <navigationItem key="navigationItem" title="Notifications" id="uwJ-4j-Y5B"/>
                     <connections>
                         <outlet property="collectionView" destination="vjo-4e-2kA" id="YX2-Fp-l2h"/>
                     </connections>

@@ -11,11 +11,13 @@ class NotificationsViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
 
     let notifications = Notification.createModels()
+    var selectedNotification: Notification?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         collectionView.dataSource = self
+        collectionView.delegate = self
 
         collectionView.register(UINib(nibName: "NotificationCell", bundle: nil), forCellWithReuseIdentifier: "NotificationCell")
 
@@ -47,4 +49,20 @@ extension NotificationsViewController: UICollectionViewDataSource {
 
         return cell
     }
+
+
+}
+
+// MARK: UICollectionViewDelegate
+extension NotificationsViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedNotification = notifications[indexPath.row]
+
+        let storyboard = UIStoryboard(name: "NotificationDetail", bundle: nil)
+        let notificationDetailVC = storyboard.instantiateViewController(withIdentifier: "NotificationDetail") as! NotificationDetailViewController
+
+        notificationDetailVC.notification = selectedNotification
+
+        self.navigationController?.pushViewController(notificationDetailVC, animated: true)
+    } 
 }
