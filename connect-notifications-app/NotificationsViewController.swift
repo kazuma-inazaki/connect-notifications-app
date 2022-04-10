@@ -9,24 +9,33 @@ import UIKit
 
 class NotificationsViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var loadingText: UILabel!
 
-    let notifications = Notification.createModels()
+    var notifications = [Notification]()
     var selectedNotification: Notification?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.notifications = Notification.createModels()
 
-        collectionView.register(UINib(nibName: "NotificationCell", bundle: nil), forCellWithReuseIdentifier: "NotificationCell")
+            DispatchQueue.main.async {
+                self.loadingText.isHidden = true
 
-        let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 34, left: 29, bottom: 34, right: 29)
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 58, height: 140)
-        layout.minimumLineSpacing = 34
+                self.collectionView.dataSource = self
+                self.collectionView.delegate = self
 
-        collectionView.collectionViewLayout = layout
+                self.collectionView.register(UINib(nibName: "NotificationCell", bundle: nil), forCellWithReuseIdentifier: "NotificationCell")
+
+                let layout = UICollectionViewFlowLayout()
+                layout.sectionInset = UIEdgeInsets(top: 34, left: 29, bottom: 34, right: 29)
+                layout.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 58, height: 140)
+                layout.minimumLineSpacing = 34
+
+                self.collectionView.collectionViewLayout = layout
+            }
+        }
     }
 }
 

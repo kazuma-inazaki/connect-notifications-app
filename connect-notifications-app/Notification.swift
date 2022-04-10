@@ -13,6 +13,7 @@ struct Notification {
     let desc: String
 
     static func createModels() -> [Notification] {
+        sleep(5)
         let longDesc = String(repeating: "this is test delivery.", count: 100)
         
         return [
